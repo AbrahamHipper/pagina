@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Quieres ser mi novia?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+      overflow-x: hidden;
+    }
+
+    section {
+      height: 100vh;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #e91e63;
+    }
+
+    p {
+      max-width: 600px;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #444;
+    }
+
+    .photo {
+      width: 250px;
+      height: 250px;
+      margin-top: 30px;
+      border-radius: 50%;
+      border: 5px solid #e91e63;
+      object-fit: cover;
+    }
+
+    .btn {
+      margin-top: 40px;
+      background-color: #e91e63;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c2185b;
+    }
+
+    .emoji {
+      font-size: 2em;
+      margin: 20px 0;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Botón de música */
+    .music-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .music-button:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botón de música -->
+  <button class="music-button" onclick="document.getElementById('miAudio').play()">🎶 Reproducir canción</button>
+
+  <!-- Sección 1: Introducción -->
+  <section style="background: #ffe6f0;">
+    <h1>Para ti, Ariet Domínguez ❤️</h1>
+    <div class="emoji">💌</div>
+    <p>
+      Desde que te conocí, mi mundo cambió.<br>
+      Cada sonrisa tuya ilumina mi día, y cada momento a tu lado es un regalo.
+    </p>
+  </section>
+
+  <!-- Sección 2: Poema -->
+  <section style="background: #fff;">
+    <h1>Un poema para ti</h1>
+    <div class="emoji">🌸</div>
+    <p>
+      Desde el instante en que llegaste,<br>
+    mi mundo cambió sin avisar,<br>
+    tu risa se volvió mi canción,<br>
+    y tus ojos, mi lugar de paz.<br><br>
+
+    Cada momento contigo es magia,<br>
+    un regalo que nunca pedí,<br>
+    pero que ahora valoro más<br>
+    que cualquier tesoro que pueda existir.<br><br>
+
+    Ariet, estar contigo ha sido<br>
+    lo más bonito que me ha pasado,<br>
+    y hoy quiero dar el siguiente paso:<br>
+    que camines a mi lado.<br><br>
+      Y en este momento sincero,<br>
+      quiero hacerte una pregunta... 🌹
+    </p>
+  </section>
+
+  <!-- Sección 3: Pregunta -->
+  <section style="background: #ffe6f0;">
+    <h1>¿Quieres ser mi novia?</h1>
+    <div class="emoji">💖</div>
+    <img src="arietyabraham.jpg" alt="Nuestra foto" class="photo" />
+    <button class="btn" onclick="alert('¡Te amo! Ahora que tu y yo formalizamos esto espero sea el comienzo de muchas cosas mas juntos siendo felices, te adoro y te queyo mi greñudita ❤️')">Sí, quiero 💘</button>
+  </section>
+
+  <!-- Reproductor de audio -->
+  <audio id="miAudio" loop>
+    <source src="justinbieber.mp3" type="audio/mpeg">
+  </audio>
+
+</body>
+</html>
